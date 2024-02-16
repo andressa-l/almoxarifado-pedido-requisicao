@@ -41,13 +41,14 @@ form {
     margin-top: 1rem;
     margin-bottom: 1rem;
     text-align: center;
+    background-color: #15c7ff;
     /* background-color: #d8dbdd; */
-    border-radius: 10px;
+    /* border-radius: 10px; */
     
 }
 
 .header h1 {
-    color: rgb(59, 56, 56);
+    color: rgb(255, 255, 255);
     font-weight: 500;
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
