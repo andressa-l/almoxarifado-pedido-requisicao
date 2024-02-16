@@ -1,5 +1,12 @@
 
 //-----------------------------Dados Principais Requisição--------------------------//
+
+//data igual ou maior que a data atual, data atual no formato yyyy-mm-dd 
+var hoje = new Date().toISOString().slice(0, 10);
+var dataRequisicao = document.getElementById("dataRequisicao");
+dataRequisicao.setAttribute("min", hoje);
+
+
 function adicionarCorAoFocarInput() {
     const listinput = document.querySelectorAll("input");
 
@@ -193,10 +200,12 @@ function validarQuantidade() {
     
     if (campoQuantidade.value === "") {
         document.getElementById('BtnInserirItens').setAttribute("disabled", true);
+        
         return;
     }
     if (campoQuantidade.value < 0) {
         campoQuantidade.value = Math.abs(campoQuantidade.value);
+
     }
     if (campoQuantidade.value == 0) {
         campoQuantidade.value = 1;
@@ -209,6 +218,7 @@ function validarQuantidade() {
     }
     else {
         document.getElementById('BtnInserirItens').setAttribute("disabled", true);
+        
     }
 }
 
@@ -319,6 +329,10 @@ function criarBtnRemover(tabela, objLinha, numeroLinha){
 
 var qtdLinhasAtualNaTabela = 0;
 document.getElementById("BtnInserirItens").addEventListener("click", function () {
+
+
+    
+    
     const tabelaItens = document.getElementById("tabelaItens");
 
     const campoProduto = document.getElementById("CodigoProduto");
@@ -360,6 +374,12 @@ document.getElementById("BtnInserirItens").addEventListener("click", function ()
     linha.appendChild(tdBtnRemover);
     tabelaItens.appendChild(linha);
 
+            // Clear the fields
+            document.getElementById("CodigoProduto").value = "";
+            document.getElementById("DescricaoProduto").value = "";
+            document.getElementById("Estoque").value = "";
+            document.getElementById("Quantidade").value = "";
+
 });
 
 document.getElementById('total').addEventListener("change", function () {
@@ -390,6 +410,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+
 
 
 adicionarCorAoFocarInput();
