@@ -8,7 +8,7 @@ A proposta para o desenvolvimento deste projeto foi a construção de um sistema
 
 ## Funcionalidades
 
-- Exibição de Amoxarifado para fazer novo pedido de requisição.
+- Exibição de Almoxarifado para fazer novo pedido de requisição.
 - Personalização de estilo: o Almoxarifado foi personalizado com fontes, cores, tamanhos e formatos de exibição.
 - De início temos os dados para fazer a nova requisição, depois consta os campos para acessar os itens da requisição.
 
