@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,500&display=swap');
+
+* {
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background:hsl(0, 36%, 96%);
+     box-shadow:0 4px 10px 4px rgba(#13232f,.3);
+}
+
+form {
+    background: rgba(188, 197, 204, 0.9);
+    box-shadow:0 4px 10px 4px rgba(#13232f,.3);
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    font-size: 35px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    background-color: #6da8d6;
+    border-radius: 10px;
+    
+}
+
+.header h1 {
+    color: black;
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding-top: 3vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-radius: 1rem;
+    flex-wrap: wrap;
+    font-size: 20px;
+    background-color: rgb(192, 198, 202);
+    box-shadow:0 4px 10px 4px rgba(#13232f,.3);
+    
+}
+
+.camposPrincipais {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vh;
+    flex-wrap: wrap;
+    border: .8px solid rgb(175, 173, 173);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.linhasCampos {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1vh;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.grupoInput {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.grupo9 {
+    margin-left: 1px;
+    display: flex;
+    justify-content: center;
+}
+
+.radioPrioridade {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3px;
+    padding-left: 1px;
+    padding-right: 5px;
+    border-color: #cdcdcd;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    color: #000000;
+}
+
+.radioPrioridadeDesabilitado {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3px;
+    padding-left: 1px;
+    padding-right: 5px;
+    border-color: #cdcdcd;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: #e75656;
+    color: #ffffff;
+}
+
+.grupoPrioridade {
+    display: flex;
+    padding-left: 2px;
+}
+
+.grupoCategoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnAdd {
+    max-width: 30px;
+    height: 30px;
+}
+
+.btnAdd:hover {
+    cursor: pointer;
+    scale: 1.5;
+    transition-duration: 1000ms;
+}
+
+.grupoMotivo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ITENS */
+.camposItens {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    border: .8px solid rgb(175, 173, 173);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 3vh;
+    flex-wrap: wrap;
+}
+
+.linhaAdicionarItens {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    
+    
+}
+
+.grupoStatusEstoque {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.grupoStatusEstoque img {
+    display: flex;
+    margin-right: 10px;
+}
+
+.grupoBtnInserirItens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.dadosPrincipais,
+.itensRequisicao {
+    padding: 20px;
+    max-width: 100%;
+    flex-wrap: wrap;
+}

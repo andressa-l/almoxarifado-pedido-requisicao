@@ -1,0 +1,213 @@
+/* Estilo base */
+
+/* Estilos padrão para telas maiores */
+.menu {
+    font-size: 15px;
+    /* Estilos do menu */
+}
+
+.header {
+    font-size: 2rem;
+}
+
+.conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os elementos se movam para a próxima linha em telas menores */
+}
+
+.dadosPrincipais,
+.itensRequisicao {
+    flex: 1;
+    padding: 20px;
+    /* Adiciona algum espaçamento interno nos contêineres principais */
+    box-sizing: border-box;
+    /* Garante que o espaçamento interno não afete o tamanho total do contêiner */
+}
+
+.titulo {
+    font-size: 1.5rem;
+}
+
+.grupoInput {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* Adaptações para telas menores */
+@media only screen and (max-width: 768px) {
+    .conteudo {
+        flex-direction: column;
+        /* Empilha os contêineres em telas menores */
+    }
+
+    .dadosPrincipais {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .camposPrincipaisLinha1,
+    .camposPrincipaisLinha2,
+    .camposPrincipaisLinha3 {
+        flex-direction: column;
+        
+    }
+
+    .grupoInput {
+        width: 100%;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .camposItens .linhaAdicionarItens {
+        flex-direction: column;
+    }
+
+    .linhaAdicionarItens {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    
+    }
+
+    .grupoProduto,
+    .grupoProdutoDescricao,
+    .grupoEstoque,
+    .grupoQuantidade {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .tabelaItens {
+        max-width: 100%;
+        overflow-x: auto;
+        font-size: 8px;
+    }
+
+    table {
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+    }
+
+    #btnRemover {
+        font-size: 8px;
+    }
+
+    .grupoTotal,
+    .grupoBtnInserirItens {
+        width: 100%;
+    }
+
+    .menu {
+        font-size: 15px;
+        /* Adaptações necessárias para o menu em telas menores */
+    }
+
+    .header {
+        font-size: 1.5rem;
+        /* Reduzir o tamanho da fonte do cabeçalho */
+    }
+
+    .dadosPrincipais,
+    .itensRequisicao {
+        padding: 10px;
+        max-width: 100%;
+        /* Adicionar algum espaçamento interno nos contêineres principais */
+    }
+
+    .titulo {
+        font-size: 1.2rem;
+        /* Reduzir o tamanho da fonte dos títulos */
+    }
+
+    .grupoInput {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .camposItens .linhaAdicionarItens {
+        flex-direction: column;
+    }
+
+    .BtnInserirItens {
+        margin-top: 10px;
+        /* Adicionar algum espaçamento acima do botão Adicionar */
+    }
+}
+
+/* Adaptações para telas ainda menores */
+@media only screen and (max-width: 480px) {
+
+    .grupoMotivo,
+    .grupoCategoria {
+        flex-direction: column;
+    }
+
+    .titulo {
+        font-size: 1rem;
+        /* Reduzir ainda mais o tamanho da fonte dos títulos */
+    }
+
+    .grupoInput {
+        margin-bottom: 5px;
+    }
+
+    .BtnInserirItens {
+        margin-top: 15px;
+        /* Aumentar o espaçamento acima do botão Adicionar em telas ainda menores */
+    }
+}
+
+/* Adaptações para dispositivos muito pequenos, como smartphones em modo retrato */
+@media only screen and (max-width: 320px) {
+    .titulo {
+        font-size: 0.5rem;
+        /* Ajustar ainda mais o tamanho da fonte dos títulos para telas muito pequenas */
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.conteudo {
+    margin-bottom: 15px;
+}
+
+.conteudo span {
+    display: block;
+    /* margin-bottom: 5px; */
+}
+
+/* .conteudo input,
+.conteudo select {
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+} */
+
+.conteudo .BtnInserirItens {
+    padding: 5px 5px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+}
+

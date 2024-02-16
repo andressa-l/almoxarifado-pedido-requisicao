@@ -1,0 +1,52 @@
+/* css para a tabela */
+.tabelaItens {
+    text-align: center;
+    align-items: center;
+    border: 1px solid #cdcdcd;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: unset;
+    table-layout: fixed;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.tabelaItens th {
+    display: table-cell;
+    flex-direction: inherit;
+    background-color: #15c7ff;
+    border: 1px solid #cdcdcd;
+    border-collapse: collapse;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    /* border-radius: 20px; */
+}
+
+.tabelaItens tr,
+.tabelaItens td {
+    border: 1px solid #cdcdcd;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+#btnRemover {
+    background-color: red;
+    cursor: pointer;
+    padding: 5px;
+    font-size: smaller;
+    border-radius: 20px;
+    color: white;
+    transition: 0.5s;
+}
+
+#btnRemover:hover {
+    background-color: rgb(144, 0, 0);
+}
+
+#nivel{
+    margin-left: 2px;
+    border: 3px solid #CDCDCD;
+}

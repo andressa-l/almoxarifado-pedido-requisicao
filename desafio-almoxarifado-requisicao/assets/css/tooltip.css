@@ -1,0 +1,25 @@
+.tooltip-container {
+  position: relative;
+}
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: #eff1c8;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1;
+  border: 2px hidden #f3ff13;
+  font-size: 10px;
+  /* font-size: 10px; */
+}
+
+.image-with-tooltip:hover+ .tooltip {
+  display: inline-block;
+  max-width: 450px;
+  gap: 20px;
+}
+
+.tooltipDiv {
+  display: flex;
+  margin-bottom: 10px;
+}
