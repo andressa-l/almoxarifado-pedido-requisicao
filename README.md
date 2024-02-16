@@ -8,9 +8,9 @@ A proposta para o desenvolvimento deste projeto foi a construção de um sistema
 
 ## Funcionalidades
 
-- Exibição de temperatura, clima e umidade.
-- Personalização de estilo: o app que mostra a previsão do tempo foi personalizado com fontes, cores, tamanhos e formatos de exibição.
-- A cada refresh da página muda a exibição do background.
+- Exibição de Amoxarifado para fazer novo pedido de requisição.
+- Personalização de estilo: o Almoxarifado foi personalizado com fontes, cores, tamanhos e formatos de exibição.
+- De início temos os dados para fazer a nova requisição, depois consta os campos para acessar os itens da requisição.
 
 ## Aprendizados
 
