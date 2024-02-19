@@ -133,6 +133,17 @@ categoriaMotivoElement.addEventListener("change", function () {
     carregarMotivos();
 });
 
+//Número pedido
+var inpNumero = document.getElementById("inpNumero");
+
+    inpNumero.addEventListener("input", function() {
+        var numeroRequisicao = inpNumero.value;
+
+        var spanItensRequisicao = document.getElementById("itensRequisicao").querySelector("span");
+
+        spanItensRequisicao.textContent = "Itens da Requisição Nº " + numeroRequisicao;
+    });
+
 //-------------------------------ITENS REQUISIÇÃO - PRODUTOS-----------------------------
 
 function verificarProduto() {
@@ -184,7 +195,29 @@ function verificarProduto() {
 
     validarQuantidade();
 }
+//Validar botão adcionar
+function verificarEstoqueBotao() {
+    var codigoProduto = parseInt(document.getElementById('CodigoProduto').value);
+    var quantidade = parseInt(document.getElementById('QuantidadeEstoque').value);
+    var btnAdicionar = document.getElementById('BtnInserirItens');
+    
 
+    if (codigoProduto && quantidade > 0) {
+        var produto = produtos.find(p => p.idProduto === codigoProduto);
+        var btnGravar = document.getElementById('btn-gravar');
+
+        if (produto && quantidade <= produto.Estoque) {
+            btnAdicionar.removeAttribute('disabled');
+            btnGravar.removeAttribute('disabled');
+        } else {
+            alert('Produto não encontrado ou a quantidade inserida é maior do que a quantidade existente em estoque!\nPor favor, insira outro valor.');
+            btnAdicionar.setAttribute('disabled', 'disabled');
+            btnGravar.setAttribute('disabled', 'disabled');
+        }
+    } else {
+        btnAdicionar.setAttribute('disabled', 'disabled');
+    }
+}
 document.getElementById("CodigoProduto").addEventListener("keyup", function () {
     let codigoPesquisado = document.getElementById("CodigoProduto").value;
     if (codigoPesquisado < 0) {
@@ -329,9 +362,6 @@ function criarBtnRemover(tabela, objLinha, numeroLinha){
 
 var qtdLinhasAtualNaTabela = 0;
 document.getElementById("BtnInserirItens").addEventListener("click", function () {
-
-
-    
     
     const tabelaItens = document.getElementById("tabelaItens");
 
@@ -386,7 +416,7 @@ document.getElementById('total').addEventListener("change", function () {
     const campoPrecoTotal = document.getElementById('total');
     let total = parseFloat(campoPrecoTotal.value);
 
-    console.log("Mudança total");
+    // console.log("Mudança total");
 
 })
 
@@ -400,6 +430,7 @@ document.addEventListener('DOMContentLoaded', function () {
         image.parentNode.appendChild(tooltip);
     });
 });
+
 
 // Seleciona todos os inputs do tipo number e desativa as setas para cada input do tipo number
 document.addEventListener('DOMContentLoaded', function () {

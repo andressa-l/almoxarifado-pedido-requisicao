@@ -15,12 +15,6 @@ body {
      box-shadow:0 4px 10px 4px rgba(#13232f,.3);;
 }
 
-form {
-    background: rgba(188, 197, 204, 0.9);
-    box-shadow:0 4px 10px 4px rgba(#13232f,.3);
-    
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -170,7 +164,7 @@ form {
     flex-direction: column;
     max-width: 100%;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     border: .8px solid rgb(175, 173, 173);
     border-radius: 10px;
     padding: 5px;
@@ -217,4 +211,64 @@ form {
     padding: 20px;
     max-width: 100%;
     flex-wrap: wrap;
+}
+
+/* tabela */
+
+/* css para a tabela */
+.tabelaItens {
+    text-align: center;
+    align-items: center;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: unset;
+    table-layout: fixed;
+    width: 100%;
+    
+    /* border: 1px solid #cdcdcd; */
+    /* border-radius: 20px; */
+}
+
+.tabelaItens th {
+    display: table-cell;
+    flex-direction: inherit;
+    background-color: #15c7ff;
+    text-align: center;
+    font-size: 10px;
+    /* padding: 8px; */
+    /* border-radius: 20px; */
+    color: white;
+    border: 1px solid #cdcdcd;
+    border-collapse: collapse;
+    text-align: left;
+    padding-left: 8px;
+}
+
+.tabelaItens tr,
+.tabelaItens td {
+    border: 1px solid #cdcdcd;
+    border-collapse: collapse;
+    padding-left: 8px;
+}
+
+#btnRemover {
+    background-color: red;
+    cursor: pointer;
+    padding: 5px;
+    font-size: smaller;
+    border-radius: 20px;
+    color: white;
+    transition: 0.5s;
+    
+}
+
+#btnRemover:hover {
+    background-color: rgb(144, 0, 0);
+}
+
+#nivel{
+    margin-left: 8px;
+    /* border: 3px solid #CDCDCD; */
 }

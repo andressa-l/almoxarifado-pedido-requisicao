@@ -8,14 +8,12 @@
     <link rel="stylesheet" href="assets/css/requisicao.css" />
     <link rel="stylesheet" href="assets/css/inputRequisicao.css" />
     <link rel="stylesheet" href="assets/css/tabela.css" />
-    <link rel="stylesheet" href="assets/css/tooltip.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/tooltip.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
 </head>
 
 <body>
-
-    <div class="container">
-        
+    <main class="container">
         <div class="conteudo">
             <header class="header">
                 <h1>Novo PEDIDO de Requisição de Saída</h1>
@@ -93,40 +91,41 @@
                 </div>
             </div>
             <div class="itensRequisicao">
-                <div class="titulo">
+                <div class="titulo" id="itensRequisicao">
                     <span>Itens da Requisição</span>
                 </div>
                 <div class="camposItens">
                     <div class="linhaAdicionarItens">
                         <div class="grupoProduto">
                             <span>Cod. Produto</span>
-                            <input type="text" id="CodigoProduto" data-obrigatorio="true" data-only-number="true" onchange="verificarProduto()" />
+                            <input type="text" id="CodigoProduto" data-only-number="true"
+                                onchange="verificarProduto()" />
                         </div>
                         <div class="grupoProdutoDescricao">
                             <span></span>
-                            <input type="text" id="DescricaoProduto" disabled data-obrigatorio="true" />
+                            <input type="text" id="DescricaoProduto" disabled />
                         </div>
                         <div class="grupoEstoque">
                             <span>Estoque</span>
-                            <input type="number" id="Estoque" disabled data-obrigatorio="true" />
+                            <input type="number" id="Estoque" disabled />
                         </div>
                         <div class="grupoQuantidade">
                             <span>Quantidade</span>
-                            <input type="number" id="Quantidade" data-obrigatorio="true" data-only-number="true" />
+                            <input type="number" id="Quantidade" data-only-number="true" />
                         </div>
 
                         <div class="grupoStatusEstoque" id="EstoqueMinimo">
-                        
-                            <div class="legenda">   
-                                <img src="assets/img/verde.svg" alt="" id="nivel" class="image-with-tooltip">
+                            <div class="legenda">
+                                <img src="assets/img/verde.svg" alt="" id="nivel" class="image-with-tooltip" />
                             </div>
                         </div>
-                        <button class="btnInserirItens" id="BtnInserirItens" disabled style="border: none;">
+                        <button class="btnInserirItens" id="BtnInserirItens" disabled style="border: none">
                             <span>Adicionar</span>
                         </button>
                     </div>
-                    <div class="tabelaItens">
-                        <table class="tabelaItens" id="tabelaItens">
+                    <table class="tabelaItens" id="tabelaItens">
+
+                        <tbody>
                             <tr>
                                 <th>Código</th>
                                 <th>Produto</th>
@@ -134,22 +133,24 @@
                                 <th>Un.</th>
                                 <th>Preço</th>
                                 <th>Total</th>
-                                <th></th>
+                                <th>#</th>
                             </tr>
-                        </table>
-                    </div>
+                        </tbody>
+
+                    </table>
                     <div class="grupoTotal">
                         <span>Total</span>
                         <input type="number" id="total" disabled data-obrigatorio="true" />
                     </div>
                     <div class="grupoBtnInserirItens"></div>
-                    <div class="BtnInserirItens" id="btn-gravar">
-                        <span>Gravar</span>
+                    <div class="BtnInserirItens" id="btn-gravar" onclick="gravar()">
+                        Gravar
                     </div>
+                    <!-- <span>Gravar</span> -->
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <script src="assets/scripts/dados.js"></script>
     <script src="assets/scripts/main.js"></script>
